@@ -1,9 +1,9 @@
 mixin navlink (link, name)
-li
+li 
     a(
-        href=link
+    href=link
     )#{name}
-
+    
 ul
     +navlink('#','login')
     +navlink('#','signup')

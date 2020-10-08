@@ -11,12 +11,12 @@ const mysql = require('mysql');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var loginRouter = require('./routes/pages/login');
-// var cartRouter = require('./routes/cart');
-// var productsRouter = require('./routes/products');
-// var profileRouter = require('./routes/profile');
-// var postRouter = require('./routes/post');
-// var signupRouter = require('./routes/signup');
+var loginRouter = require('./routes/pages/login');
+var cartRouter = require('./routes/cart');
+var productsRouter = require('./routes/products');
+var profileRouter = require('./routes/profile');
+var postRouter = require('./routes/post');
+var signupRouter = require('./routes/signup');
 
 var app = express();
 
@@ -46,13 +46,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //ADDED-----------
 app.use('/', indexRouter);
-// app.use('/login',loginRouter);
+app.use('/login',loginRouter);
 app.use('/users', usersRouter);
-// app.use('/cart', cartRouter);
-// app.use('/post', postRouter);
-// app.use('/products',productsRouter);
-// app.use('/signup',signupRouter);
-// app.use('/profile',profileRouter);
+app.use('/cart', cartRouter);
+app.use('/post', postRouter);
+app.use('/products',productsRouter);
+app.use('/signup',signupRouter);
+app.use('/profile',profileRouter);
 //---------
 
 
