@@ -1,6 +1,10 @@
 extends templates/layout
 
 block content
+
+  
+  p Welcome to #{title}
+
     includes templates/layout
     html
         body
@@ -25,3 +29,4 @@ block content
 
                         .form-group
                             input.btn.btn-primary.btn-block(type='submit', value='Login', formaction='/action/login')
+

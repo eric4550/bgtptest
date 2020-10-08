@@ -33,21 +33,4 @@ router.get('/login', async function(req, res) {
             }
         });
     });
-    if (Array.isArray(users) && users.length) {
-        req.app.locals.session.isAuthenticated = true;
-        req.app.locals.session.user = users[0];
-        req.originalUrl = '/index';
-        res.redirect('/index');
-    } else {
-        res.redirect('/login');
-    }
 });
-
-router.get('/logout', async function (req, res) {
-    req.app.locals.session = {
-        isAuthenticated: false,
-    };
-    res.redirect('/index');
-});
-
-

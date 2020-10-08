@@ -1,8 +1,16 @@
 body {
+  background-color: lightblue;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+#navbar-inverse{
+  background-color: #03254c;
 }
 
 a {
   color: #00B7FF;
+}
+.row{
+  background-color: red;
 }
