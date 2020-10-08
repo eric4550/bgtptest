@@ -1,0 +1,11 @@
+mixin navlink (link, name)
+li
+    a(
+        href=link
+    )#{name}
+
+ul
+    +navlink('#','login')
+    +navlink('#','signup')
+    +navlink('#','cart')
+    +navlink('#','post')
